@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //This calculator accepts decimals, but only accepts "+", "-", "*", and "/" as operators
+            
+            Console.Write("First number:     ");
+                string num1 = Console.ReadLine();
+            Console.Write("Symbol:           ");
+                var sym = Console.ReadLine();
+            Console.Write("Second Number:    ");
+                string num2  = Console.ReadLine();
+
+            decimal dec1 = Convert.ToDecimal(num1);
+            decimal dec2 = Convert.ToDecimal(num2);
+
+            if (sym == "+")
+            {
+                Console.Write($"\nResult:           ");
+                Console.WriteLine(dec1 + dec2);
+            }
+            
+            if (sym == "-")
+            {
+                Console.Write($"\nResult:           ");
+                Console.WriteLine(dec1 - dec2);
+            }
+
+            if (sym == "*")
+            {
+                Console.Write($"\nResult:           ");
+                Console.WriteLine(dec1 * dec2);
+            }
+
+            if (sym == "/")
+            {
+                Console.Write($"\nResult:           ");
+                Console.WriteLine(dec1 / dec2);
+            }
+		}
+    }
+}
